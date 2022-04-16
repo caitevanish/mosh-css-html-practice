@@ -1,3 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  
+}
+
+body {
+  background-color: blanchedalmond;
+}
 nav {
   background-color: black;
   width: 100vw;
@@ -12,31 +25,16 @@ section {
 }
 
 ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   margin-right: 1em;
 }
+
 li {
-  color: white;
+  color: black;
   list-style: none;
   padding: 0.5rem;
 }
-
-@media screen and (max-width: 390px) {
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
+a {
+  text-decoration: none;
 }
 
 /* Exercise 2 */
