@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'quattrocento';
+  src: url('quattrocento-bold-webfont.woff2') format('woff2'),
+    url('quattrocento-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quattrocento';
+  src: url('fonts/quattrocento/quattrocento-regular-webfont.woff2')
+      format('woff2'),
+    url('fonts/quattrocento/quattrocento-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quattrocentosans';
+  src: url('fonts/quattrocento/quattrocentosans-bold-webfont.woff2')
+      format('woff2'),
+    url('fonts/quattrocento/quattrocentosans-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quattrocentosans';
+  src: url('fonts/quattrocento/quattrocentosans-regular-webfont.woff2')
+      format('woff2'),
+    url('fonts/quattrocento/quattrocentosans-regular-webfont.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quattrocentosans';
+  src: url('fonts/quattrocento/quattrocentosans-italic-webfont.woff2')
+      format('woff2'),
+    url('fonts/quattrocento/quattrocentosans-italic-webfont.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'quattrocentro', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 62.5%;
+  /* display: flex;
+  width: 50vw;
+  align-items: center; */
+}
+.container {
+  border: 2px black solid;
+  padding: 2rem;
+  margin: 3rem;
+  width: 50%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  padding: 1rem 0 1rem;
+}
+h1 {
+  font-size: 3.157rem;
+}
+h2 {
+  font-size: 2.369rem;
+}
+h3 {
+  font-size: 1.777rem;
+}
+
+p:first-of-type {
+  font-family: 'quattrocento', Arial, Helvetica, serif;
+  font-style: italic;
+  padding: 1rem 0 0 0;
+  font-size: 1rem;
+}
+
+ul {
+  text-indent: 1rem;
+}
+
+/* TODO: Fix the markers  */
+li {
+  font-size: 1rem;
+  text-indent: 1.5;
+  word-spacing: 1.5px;
+}
+
+li::marker {
+  marker-start: 1rem;
+}
+
+a {
+  font-size: 0.9rem;
+}
