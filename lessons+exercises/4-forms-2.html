@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms</title>
     <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/4-styles.css" />
+    <link rel="stylesheet" href="/css/4-styles-2.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
     />
   </head>
   <body>
@@ -29,16 +29,201 @@
     <div class="lesson-5">
       <h2>5- Text Fields</h2>
       <form>
+        <input type="text" placeholder="text" />
+        <input type="number" placeholder="number" />
+        <input type="password" placeholder="password" />
+        <input type="date" placeholder="date" />
+        <input type="email" placeholder="email" />
+        <textarea cols="30" rows="10" placeholder="textarea"></textarea>
+        <input
+          type="text"
+          value="pre-populated value"
+          placeholder="placeholder"
+        />
+        <input type="text" value="readonly value" readonly />
+        <input type="text" value="Disabled" disabled />
+        <input type="text" placeholder="max-length=5" maxlength="5" />
+        <input type="text" placeholder="autofocus" autofocus />
+      </form>
+      <ul>
+        <li>
+          List types:<code
+            ><br />
+            < input type="text" /><br />
+            < input type="number" /><br />
+            < input type="password" /><br />
+            < input type="date" /><br />
+            < input type="email" /><br />
+            < textarea cols="30" rows="10" placeholder="textarea"/><br
+          /></code>
+        </li>
+        <li>
+          Make textarea non-resizeable, in css set <code>resize: none</code>
+        </li>
+        <li>
+          Other less used input elements:
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"
+            >MDN: input types</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!---------------------------- Lesson 6 --------------------------->
+    <div class="lesson-6">
+      <h2>6- Data Lists</h2>
+      <form action="">
+        <input type="text" list="countries" autocomplete="off" />
+        <datalist id="countries">
+          <option data-value="1">Australia</option>
+          <option>USA</option>
+          <option>Canada</option>
+          <option>India</option>
+        </datalist>
+      </form>
+      <ul>
+        <li>Provide list of suggestions: datalist and options</li>
+        <li>When text box is focused you see the list</li>
+        <li>Create own custom attribute iwth <code>data-value="1"</code></li>
+        <li>turn off autocomplete value as input attribute</li>
+        <li>
+          Datalist: Browser default styles will take over; set list attribute to
+          an empty string. Use Javascript to manually display datalist
+        </li>
+      </ul>
+    </div>
+    <!---------------------------- Lesson 7 --------------------------->
+    <div class="lesson-7">
+      <h2>7- Drop-down Lists</h2>
+      <form action="">
+        <select>
+          <option value="">Select a Course...</option>
+          <option value="1">HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">JavaScript</option>
+        </select>
+      </form>
+      <ul>
+        <li>
+          Select: need name attribute when you are submitting form to server
+        </li>
+        <li>
+          To have a pre-selected item, use <code>selected</code>attribute
+          (Boolean value) <code>< option value="1" selected>HTML/></code>
+        </li>
+        <li>
+          To select multiple items: <code>multiple</code> attribute in select
+          tag
+        </li>
+        <li>
+          If too many items in list, categorize them with
+          <code>Option Group Element</code>
+        </li>
+      </ul>
+      <form>
+        <select>
+          <optgroup label="Front-end Courses" placeholder="Choose a course">
+            <option value="1">HTML</option>
+            <option value="2">CSS</option>
+            <option value="3">JavaScript</option>
+          </optgroup>
+          <optgroup label="Back-end Courses">
+            <option value="1">Node</option>
+            <option value="2">ASP.NET</option>
+            <option value="3">Django</option>
+          </optgroup>
+        </select>
+      </form>
+    </div>
+    <!---------------------------- Lesson 8 --------------------------->
+    <div class="lesson-8">
+      <h2>8- Check Boxes</h2>
+      <form>
         <div>
-          <label for="name">Name</label>
-          <input id="name" type="text" />
+          <input type="checkbox" id="front-end" />
+          <label class="label-inline" for="front-end">Front-end</label>
         </div>
         <div>
-          <label for="email">Email</label>
-          <input id="email" type="email" />
+          <input type="checkbox" id="back-end" checked />
+          <label class="label-inline" for="back-end">Back-end</label>
         </div>
-        <button type="submit">Register</button>
-        <button type="reset">Clear</button>
+      </form>
+      <ul>
+        <li>
+          Tip! Type "input:" and you will see a list of different types of
+          inputs!
+        </li>
+        <li>
+          Use utility class to put the label next to the checkbox<br /><code
+            ><label class="label-inline" for="front-end">Front-end</label></code
+          >
+        </li>
+        <li>Stack elements vertically by wrapping in a div</li>
+        <li>
+          Have check box checked by default (boolean attribute) in input tag:
+          <code>< input type="checkbox" id="back-end" checked></code>
+        </li>
+      </ul>
+    </div>
+    <!---------------------------- Lesson 9 --------------------------->
+    <div class="lesson-9">
+      <h2>9- Radio Buttons</h2>
+      <form action="">
+        <div>
+          <input type="radio" name="membership" id="silver" />
+          <label for="silver" class="label-inline">Silver</label>
+        </div>
+        <div>
+          <input type="radio" name="membership" id="gold" />
+          <label for="gold" class="label-inline">Gold</label>
+        </div>
+      </form>
+      <ul>
+        <li>Use name attribute in input tag to group multiple radio buttons</li>
+        <li>Pre-selected radio button: checked attribute in input</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!---------------------------- Lesson 10 --------------------------->
+    <div class="lesson-10">
+      <h2>10- Sliders</h2>
+      <form>
+        <input type="range" min="0" max="100" value="90" />
+      </form>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <!---------------------------- Lesson 11 --------------------------->
+    <div class="lesson-11">
+      <h2>11- File Inputs</h2>
+      <form action="">
+        <input type="file" accept=".jpg" />
+      </form>
+      <ul>
+        <li>multiple, select (ie. jpg, svg, pdf)</li>
+        <li>multiple file types separated with a comma</li>
+        <li>image/*, audio/*, video/*</li>
+      </ul>
+    </div>
+    <!---------------------------- Lesson 12 --------------------------->
+    <div class="lesson-12">
+      <h2>12- Grouping Related Fields</h2>
+      <form>
+        <fieldset>
+          <legend>Billing Address</legend>
+          <input type="text" name="" />
+          <input type="text" name="" />
+          <input type="text" name="" />
+        </fieldset>
+        <fieldset>
+          <legend>Payment</legend>
+          <input type="text" name="" />
+          <input type="text" name="" />
+          <input type="text" name="" />
+        </fieldset>
       </form>
       <ul>
         <li></li>
@@ -48,109 +233,71 @@
         <li></li>
       </ul>
     </div>
-  <!---------------------------- Lesson 6 --------------------------->
-    <div class="lesson-6">
-      <h2></h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
- <!---------------------------- Lesson 7 --------------------------->
-    <div class="lesson-7">
-      <h2></h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
- <!---------------------------- Lesson 8 --------------------------->
-    <div class="lesson-8">
-      <h2></h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>   
-  <!---------------------------- Lesson 9 --------------------------->
-    <div class="lesson-9">
-      <h2></h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <div class="lesson-10">
-      <h2></h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <div class="lesson-11">
-      <h2></h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <div class="lesson-12">
-      <h2></h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
+    <!---------------------------- Lesson 13 --------------------------->
     <div class="lesson-13">
-      <h2></h2>
+      <h2>13- Hidden Fields</h2>
+      <form>
+        <input type="hidden" name="course-id" value="1234" />
+      </form>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Never store sensitive values in the hidden field.</li>
+        <li>Often store idea of the content being edited</li>
       </ul>
     </div>
+    <!---------------------------- Lesson 14 --------------------------->
     <div class="lesson-14">
-      <h2></h2>
+      <h2>14- Data Validation</h2>
+      <form action="">
+        <input type="text" required minlength="3" maxlength="10" />
+        <button type="submit">Submit</button>
+      </form>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+          Make sure the values are being filled out correctly:<br />Required
+          fields<br />Emails<br />Numbers<br />Dates
+        </li>
+        <li>Html has built in validation</li>
+        <li>
+          Malicious users can put in an extremely long string that'll wreck your
+          wesbite
+        </li>
         <li></li>
         <li></li>
       </ul>
     </div>
+    <!---------------------------- Lesson 15 --------------------------->
     <div class="lesson-15">
       <h2></h2>
+      <form action="https://formspree.io/f/mzbokebn" method="POST">
+        <input type="text" placeholder="Name" name="name" />
+        <input type="text" placeholder="Email" email="email" />
+        <input type="submit" placeholder="Submit" />
+      </form>
       <ul>
-        <li></li>
-        <li></li>
+        <li>
+          To submit a form, you use action attribute. Need to use a server-side
+          technology:<br />
+          Node/Express<br />
+          Django<br />
+          ASP.NET<br />
+          Laravel<br />
+          Ruby on Rails
+        </li>
+
         <li></li>
         <li></li>
         <li></li>
       </ul>
+      <ol>
+        <strong>Setting up form to a backend:</strong>
+        <li>
+          Quick and easy database/backend:<a href="formspree.io">FormSpree</a>
+        </li>
+        <li>Create a New Form; copy link and put in the action att.</li>
+        <li>Add method attribute "POST" to form tag</li>
+        <li>Add names to inputs with "name" and "email"</li>
+        <li></li>
+      </ol>
     </div>
     <footer>I'm a foot</footer>
   </body>
