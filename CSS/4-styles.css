@@ -1,0 +1,88 @@
+code {
+  color: #cc2c2c;
+}
+/* .container {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  padding: 10px 20px;
+} */
+
+.left__side a {
+  /* text-decoration: none; */
+  font-size: 1rem;
+  /* text-transform: capitalize; */
+}
+
+.right__side a {
+  /* text-decoration: none; */
+  margin-left: 10px;
+  font-size: 1rem;
+  padding: 2px 5px;
+}
+
+body {
+  line-height: 1.5;
+}
+
+h2 {
+  border-top: solid;
+  padding: 1rem 0 1rem 1.5rem;
+}
+
+footer {
+  background-color: black;
+  padding: 10px 0px;
+}
+
+/* -------------Lesson 3 CSS---------------- */
+
+.lesson-3 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+label {
+  display: block;
+}
+
+input[type='text'],
+input[type='email'] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem 0.7rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input[type='text']:focus,
+input[type='email']:focus {
+  border-color: blueviolet;
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(24, 117, 255, 0.25);
+}
+
+.form-group {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+button.lesson-3 {
+  background: rgba(24, 117, 255, 0.75);
+  color: #fff;
+  border: 0;
+  padding: 0.5rem 0.7rem;
+  border-radius: 5px;
+  outline: 0;
+}
+/* -------------Lesson 4 CSS---------------- */
+
+/* Utilizing Bootstrap CDN */
+.lesson-4__form {
+  padding: 1rem 0 2rem 3rem;
+}
+/* -------------Lesson # CSS---------------- */
+/* -------------Lesson # CSS---------------- */
+/* -------------Lesson # CSS---------------- */
+/* -------------Lesson # CSS---------------- */
+/* -------------Lesson # CSS---------------- */
+/* -------------Lesson # CSS---------------- */
+/* -------------Lesson # CSS---------------- */
+/* -------------Lesson # CSS---------------- */
