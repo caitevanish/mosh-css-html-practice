@@ -1,0 +1,78 @@
+* {
+  padding-left: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.meal {
+  width: 100px;
+}
+
+.background {
+  background: url(../images/bg-sanfrancisco.jpg);
+  background-repeat: no-repeat;
+  /* background-position: 100px 100px; */
+  background-size: 100vw;
+  /* background-attachment: fixed; */
+  height: 267px;
+}
+
+.sprite {
+  background: url('../images/sprite.png') no-repeat top left;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.sprite.dishes {
+  background-position: 0 0;
+}
+.sprite.rocketship {
+  background-position: -100px 0;
+}
+.sprite.saturn {
+  background-position: -200px 0;
+}
+.sprite.landing {
+  background-position: -300px 0;
+}
+.sprite.ufo {
+  background-position: -400px 0;
+}
+
+.meal2 {
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
+}
+
+.meal3:hover {
+  filter: grayscale(70%) blur(3px);
+}
+
+.meal4 {
+  width: 400px;
+}
+
+footer {
+  background-color: black;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  margin-top: 50px;
+}
+
+.ufo {
+  width: 100px;
+  padding-left: 30vw;
+}
+.ufo-back {
+  background-image: url(/images/constellation.svg);
+  color: white;
+}
