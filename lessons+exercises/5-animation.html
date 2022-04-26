@@ -6,14 +6,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/5-styles.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Transformations, Transitions, and Animations</title>
   </head>
   <body>
+    <a href="/">Back to Menu</a>
     <h1>Transformations, Transitions, and Animations</h1>
-    <div class="lesson-1"><h2></h2></div>
-    <div class="lesson-2"><h2></h2></div>
-    <div class="lesson-3"><h2></h2></div>
-    <div class="lesson-4"><h2></h2></div>
-    <div class="lesson-5"><h2></h2></div>
+    <div class="lesson-1"><h2>1- Introduction</h2></div>
+    <!---------------------------- Lesson 2 --------------------------->
+    <div class="lesson-2">
+      <h2>2- Transformations</h2>
+      <div class="body">
+        <div class="box">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </div>
+      </div>
+      <ul>
+        <strong>Transformations:</strong>
+        <li>rotate()</li>
+        <li>scale()</li>
+        <li>skew()</li>
+        <li>translate(): move the box on the horizontal access of screen</li>
+      </ul>
+      <code
+        >< div class="body"><br>
+          < div class="box"><br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>
+          </><br>
+        </></code
+      >
+      <h4>CSS</h4>
+      <code>.body {<br>
+        display: flex;<br>
+        justify-content: center;<br>
+        align-items: center;<br>
+      }<br>
+      <br>
+      .box {<br>
+        width: 100px;<br>
+        height: 100ox;<br>
+        background: gold;<br>
+      }<br>
+      <br>
+      .box:hover {<br>
+        transform: rotate(-15deg) scale(1.5);<br>
+        transition: (0.6s);<br>
+      }</code>
+    </div>
+    <!---------------------------- Lesson 3 --------------------------->
+    <div class="lesson-3">
+      <h2>3- 3D Transformations</h2>
+      <div class="body">
+        <div class="box-2">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </div>
+      </div>
+      <ul>
+        <li>translateZ(): This hover property will move the element closer (+) or far (-) away from you. Must call the perspective function first!</li>
+        <li>RotateY() : Rotate the object around its center. To change that position, must use <code>transform-origin:</code> rule</li>
+        <li>Wrap elements in a container class and they will animate together</li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="body">
+        <div class="box-3">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </div>
+      </div>
+      <code>.box-2:hover { <br>
+        transform: perspective(200px) translateZ(50px) RotateY(45deg);<br>
+        transition: (0.6s);<br>
+      }<br>
+      <br>
+      .box-3:hover {<br>
+        transform: perspective(200px) RotateY(45deg);<br>
+        transform-origin: 0 50%;<br>
+      }<br> </code>
+      <p>Make sure all elements are sharing the same perspective</p>
+      <br>
+    <code>
+      .container {<br>
+        perspective: 200px<br><br>
+      }
+      .container:hover .box{<br>
+        transform: perspective(200px) RotateY(45deg);<br>
+        transform-origin: 0 50%;<br>
+      }
+    </code>
+
+    </div>
+    <!---------------------------- Lesson 4 --------------------------->
+    <div class="lesson-4">
+      <h2>4- Transitions</h2>
+      <div class="body">
+        <div class="box-4">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </div>
+      </div>
+      <ul>
+        <li>Apply transitions to the ie. .box element (not the hover)</li>
+        <li>linear (default)</li>
+        <li>ease-in</li>
+        <li>ease-out</li>
+        <li>cubic-bezier: customize the curve transition (<a href="https://cubic-bezier.com/#.17,.67,.83,.67">cubic-bezier.com</a>)</li>
+      </ul>
+    </div>
+    <code>.box-4 {<br>
+      width: 100px;<br>
+      height: 100ox;<br>
+      background: gold;<br>
+      transition: transform 0.5s linear;<br>
+    }<br><br>
+
+      .box-4:hover {<br>
+        transform: rotate(45deg);<br>
+        background: dodgerblue;<br>
+      }<br>
+    </code>
+    <!---------------------------- Lesson 5 --------------------------->
+    <div class="lesson-5">
+      <h2>5- Animations</h2>
+      <div class="body">
+        <div class="box-5">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </div>
+      </div>
+      <p>Animation for when you want to go beyond the basic transformations</p>
+      <ul><strong>@keyframes:</strong>
+        <li>animation has several frames</li>
+        <li>Call your animation anything (ie.pop)</li>
+        <li>Specify percentage of time of animation sequence</li><br>
+        0% = first frame<br>
+        25% = make slightly larger<br>
+        50% = rotate 45deg clockwise, also change background to tomato<br>
+        100% = rotate element to 0deg (back to normal position)<br>
+      </ul>
+      <ul><strong>.box element</strong>
+        <li><code>animation-name:pop</code></li>
+        <li><code>animation-duration: 4s;</code></li>
+        <li><code>Animation starts on page refresh</code></li>
+        <li><code>animation-iteration-count: infinite</code></li>
+        <li><code>animation-timing-function: ease-out</code></li>
+        <li><code>animation-direction: alternate</code></li>
+      </ul>
+    </div>
+    <!---------------------------- Lesson 6 --------------------------->
+    <div class="lesson-6">
+      <h2>6- Reusable Animations</h2>
+      <p>Anytime you need to reuse an animation, simply re-use the animation class</p>
+      <div class="body">
+        <div class="box-6 animation-pop">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+      </div>
+      <code>
+        .box-6 {<br>
+          width: 100px;<br>
+          height: 100ox;<br>
+          background: gold;<br>
+        }<br>
+        <br>
+        .animation-pop {<br>
+        animation-name: pop;<br>
+        animation-duration: 4s;<br>
+        animation-delay: 1s;<br>
+        animation-iteration-count: infinite;<br>
+        animation-timing-function: ease-out;<br>
+        animation-direction: alternate;<br>
+        animation: pop 4s ease-out;<br>
+      }<br>
+      </code>
+      <ul>
+        <li>Animate.css! <a href="https://animate.style/">Right here</a></li>
+        <li>Paste the markup into the header</li>
+      </ul>
+
+      <div class="body">
+        <div class="box-6 animate__animated animate__bounce">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+      </div>
+    </div>
   </body>
 </html>
