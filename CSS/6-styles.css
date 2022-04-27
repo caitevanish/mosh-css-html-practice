@@ -1,0 +1,20 @@
+ol > li {
+  font-weight: bold;
+}
+
+ul > li {
+  font-weight: 400;
+}
+
+:root {
+  --color-primary: #fff;
+  --border-size: 2px;
+}
+
+.hero .btn {
+  background: gold;
+  border: 0;
+  border-radius: 5px;
+  padding: 5;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

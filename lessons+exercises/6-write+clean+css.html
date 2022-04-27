@@ -9,11 +9,211 @@
     <title>Write Clean CSS3</title>
   </head>
   <body>
+    <div class="left__side">
+      <a href="/">Back to Menu</a>
+    </div>
     <h1>Write Clean CSS3</h1>
-    <div class="lesson-1"><h2></h2></div>
-    <div class="lesson-2"><h2></h2></div>
-    <div class="lesson-3"><h2></h2></div>
-    <div class="lesson-4"><h2></h2></div>
-    <div class="lesson-5"><h2></h2></div>
+    <div class="lesson-2">
+      <h2>2- CSS Best Practices</h2>
+      <h3>Best Practices:</h3>
+      <ol>
+        <li>
+          Follow a naming convention consistently
+          <ul>
+            <li>Kebab case: .nav-bar</li>
+            <li>Camel case: .navBar</li>
+            <li>Pascal case: .NavBar</li>
+            <li>Snake case: .nav_bar</li>
+          </ul>
+        </li>
+        <li>Create logical sections in your stylesheet</li>
+        <ul>
+          <li>Separate style sheets in different sections</li>
+          <li>Add comments in .css to group ie. typography, body, etc.</li>
+        </ul>
+        <li>Avoid over-specific selectors</li>
+        <ul>
+          <li>Common problem</li>
+          <li>Remove direct child selectors, make selectors more relaxed.</li>
+          <li>Remove type of HTML elements</li>
+          <li>Rename li and give class name as 'item' remove redundancy</li>
+          <li>
+            !important could leak into other similar elements that already have
+            their own styling.
+          </li>
+          <ul>
+            <li>
+              specify the element that will be changed by using a prefix to
+              specify the element within a component .nav .nav-item{ }
+            </li>
+
+            <li>rename the class with the new prefix</li>
+          </ul>
+        </ul>
+        <li>
+          Avoid !important keyword.
+          <ul>
+            <li>chances are you're getting too specific</li>
+          </ul>
+        </li>
+        <li>
+          Sort CSS properties
+          <ul>
+            <li>Unsorted properties are hard to read</li>
+          </ul>
+          <ol>
+            <li>Select properties</li>
+            <li>
+              Command palette > 'sort' > 'Sort lines ascending' (this puts in
+              alphabetical order)
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          Take advantage of style inheritance
+          <ul>
+            <li>Apply the style to parent elements</li>
+          </ul>
+        </li>
+        <li>
+          Extract repetitive patterns
+          <ul>
+            <li>Object Oriented CSS</li>
+          </ul>
+        </li>
+        <li>
+          Avoid repetive values in code
+          <ul>
+            <li>DRY: Don't repeat yourself</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <div class="lesson-3">
+      <h2>3- Variables</h2>
+      <ul>
+        <li>Use CSS variables to get rid of duplications</li>
+        <li>
+          Use the root pseudo class selector matches HTML element. Define custom
+          properties or global variables
+        </li>
+        <li>
+          Start with 2 hyphens and then give variable custom property or name
+        </li>
+        <code>
+          <br />:root{<br />
+          --color-primary: #fff;<br />
+          --border-size: 2px;<br />
+          }<br />
+          <br />
+          .one{<br />
+          background: #kkk<br />
+          }<br />
+        </code>
+        <li>
+          These custom properties will be accessed by all elements in the DOM.
+        </li>
+        <li>Access the bavkground using the var function.</li>
+
+        <code
+          ><br />.one{<br />
+          background: var(--color-primary)<br />
+          }<br
+        /></code>
+      </ul>
+    </div>
+    <div class="lesson-4">
+      <h2>4- Object-oriented CSS</h2>
+      <ul>
+        <li>Reusable components.</li>
+        <li>Structure styles to make them reusable.</li>
+        <li>End up wiht a smaller, more maintable style sheets</li>
+      </ul>
+      <h3>Principles:</h3>
+      <ol>
+        <li>Separate container from content</li>
+        <code
+          ><br />.hero .btn {<br />
+          background: gold;<br /><br />
+          border: 0;<br />
+          border-radius: 5px;<br />
+          padding: 5;<br />
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;<br />
+          }<br
+        /></code>
+        <ul>
+          <li>Sidebar = aside HTML element</li>
+          <li>btn = content, hero = container</li>
+          <li>Separate content from the container!</li>
+          <li>
+            remove .hero from rule and it will apply to all btns (ie. in hero
+            AND in aside/sidebar)
+          </li>
+        </ul>
+        <li>Separate structure and skin</li>
+        <ul>
+          <li>
+            Structure = ie. border, border-radius, padding, font-family, etc.
+          </li>
+          <li>Skin = ie. color</li>
+          <li>Use abstract names for classes (ie. btn-primary > btn-gold)</li>
+        </ul>
+      </ol>
+      <h4>HTML:</h4>
+      <code>
+        < header class="hero"><br>
+          < button class = "btn btn-primary">Sign-Up< /button><br>
+          <br>
+        < aside class="side-bar"><br>
+          < button class="btn btn-secondary">Contact</><br>
+        </>< /header><br>
+      </code>
+      <h4>CSS:</h4>
+      <code>
+        .btn {<br />
+          
+          border: 0;<br />
+          border-radius: 5px;<br />
+          padding: 5;<br />
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;<br />
+          }<br><br>
+
+          .btn-primary{<br>
+            background: gold;<br>
+          }<br><br>
+          .btn-secondary{<br>
+            background: blue;<br>
+          }<br>
+       
+      </code>
+
+    </div>
+    <div class="lesson-5"><h2> 5- BEM</h2>
+    <ul>
+      <li>BEM = Block element modifier</li>
+      <li>Elements that can be modified</li>
+    </ul>
+    <h3>Card</h3>
+    <p>Elements only make sense in the context of their block, not supported outside of block.</p>
+    <code>< div class="card card--popular"><br>
+      < header class="card__header"><br>
+        < span class="card__price"><br>
+          < div class="card__body"><br>
+            < button class="btn"></><br>
+          < /div><br>
+        < /span><br>
+      < /header><br>
+    < /div><br>
+    </code>
+    <h3>Modify</h3>
+    <ul>
+      <li>Class gets double hyphen and modified name</li>
+      <li>Use double hyphens to separate block from a modifier and 2 underscores to separate block from an element</li>
+    </ul>
+    <code>< div class="card card--popular"></></code>
+    </div>
   </body>
 </html>
